@@ -3,6 +3,9 @@ channels:
   - defaults
 dependencies:
   - python=3.8
+  - pip
+  - numpy>=1.19
+  - Cython
   - pip:
     - vamp>=1.1.0,<2.0.0
     - spleeter>=2.3.0,<3.0.0
