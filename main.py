@@ -30,7 +30,7 @@ def main():
     parser.add_argument("-i", "--input", required=True, help="Path to input WAV file")
     parser.add_argument("-o", "--output", default="./", help="Output file or directory for results")
     parser.add_argument("-m", "--model", default="music", choices=MODEL_MAP.keys(), help="Model type to use")
-    parser.add_argument("--checkpoints-path", default=MODULE_PATH, help="Path to omnizart module directory for checkpoints")
+    parser.add_argument("--checkpoints-path", default=str(Path(MODULE_PATH).parent), help="Path to omnizart module directory for checkpoints")
 
     args = parser.parse_args()
     input_path = Path(args.input).resolve()
