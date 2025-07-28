@@ -22,7 +22,9 @@ EXPECTED_CHECKPOINTS = [
 
 
 def checkpoints_exist(base_path):
-    return any((base_path / rel_path).exists() for rel_path in EXPECTED_CHECKPOINTS)
+    music_piano_ckpt = base_path / "omnizart/checkpoints/music/music_piano/variables/variables.data-00000-of-00001"
+    print(f"Checking for music piano checkpoint at: {music_piano_ckpt}")
+    return music_piano_ckpt.exists()
 
 
 def main():
