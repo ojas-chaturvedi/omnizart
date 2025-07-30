@@ -13,13 +13,6 @@ MODEL_MAP = {
     "chord": chord_transcribe,
 }
 
-# Known checkpoints to check for (any one is enough to skip downloading)
-EXPECTED_CHECKPOINTS = [
-    "checkpoints/music/music_piano/variables/variables.data-00000-of-00001",
-    "checkpoints/chord/chord_v1/variables/variables.data-00000-of-00001",
-    "checkpoints/drum/drum_keras/variables/variables.data-00000-of-00001"
-]
-
 
 def checkpoints_exist(base_path):
     music_piano_ckpt = base_path / "omnizart/checkpoints/music/music_piano/variables/variables.data-00000-of-00001"
