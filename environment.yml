@@ -1,11 +1,14 @@
 name: omnizart
 channels:
   - defaults
+  - conda-forge
 dependencies:
   - python=3.8
   - pip
   - numpy>=1.19
   - Cython
+  - ffmpeg
+  - tensorflow
   - pip:
     - vamp>=1.1.0,<2.0.0
     - spleeter>=2.3.0,<3.0.0
@@ -18,6 +21,6 @@ dependencies:
     - pillow>=8.3.2,<9.0.0
     - pretty_midi>=0.2.9,<0.3.0
     - pyyaml>=5.3.1,<6.0.0
-    - tensorflow==2.5.0
+    # - tensorflow==2.5.0
     - tqdm>=4.49.0,<5.0.0
     - urllib3==1.26.4
